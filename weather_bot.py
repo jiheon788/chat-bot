@@ -7,7 +7,8 @@ import requests
 from bs4 import BeautifulSoup
 import urllib.request
 
-TOKEN = '5213699570:AAEaAPz5oWzsAqT_XoLxX2ZRRPyeAmyv_-U'
+with open("./data/token.txt", "r") as f:
+    TOKEN = f.read()
 
 def get_weather(where):
   weather = ""

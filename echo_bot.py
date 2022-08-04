@@ -4,7 +4,8 @@ from email.message import Message
 import telepot
 from telepot.loop import MessageLoop
 
-TOKEN = '5213699570:AAEaAPz5oWzsAqT_XoLxX2ZRRPyeAmyv_-U'
+with open("./data/token.txt", "r") as f:
+    TOKEN = f.read()
 
 def handle(msg):
   content_type, chat_type, chat_id, msg_date, msg_id = telepot.glance(msg, long=True)
